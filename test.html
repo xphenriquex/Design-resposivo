@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Teste</title>
+        <style>
+            #main {
+                background-color: blue;
+                max-width: 600px;
+                height: 300px;
+                margin: 0 auto;
+            }
+            
+            li a{
+                color: purple;
+            }
+
+            .container {
+                border: green 2px solid;
+                height: 300px;
+            }
+
+            nav {
+                border: purple 2px solid;
+                float: left;
+                width: 25%;
+            }
+
+            section {
+                border: yellow 2px solid;
+                margin-left: 25%;
+            }
+
+            section p {
+                padding: 10px;
+            }
+
+            @media screen and (min-width: 600px) {
+                nav {
+                    border: purple 2px solid;
+                    float: left;
+                    width: 25%;
+                }
+
+                section {
+                    border: yellow 2px solid;
+                    margin-left: 25%;
+                }
+
+            }
+
+            @media screen and (max-width: 599px) {
+                nav li {
+                    display: inline;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <!-- <div id="main">Teste</div> -->
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">ínicio</a></li>
+                    <li><a href="#">Taco Menu</a></li>
+                    <li><a href="#">Rascunho</a></li>
+                    <li><a href="#">Horas</a></li>
+                    <li><a href="#">Direções</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+            <section >
+                <p>Quando esse layout é muito estreito, o nav fica esmagado. Pior, não podemos utilizar min-width para corrigir isso, pois a coluna à direita não respeitaria isso.</p>
+            </section>
+            <section >
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit."</p>
+            </section>
+        </div>
+    </body>
+</html>
