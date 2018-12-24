@@ -84,14 +84,19 @@ ul {
 .nav {
   /* width: 800px; */
   max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: right;
+  /* height: 72px;
+  line-height: 72px;  */
+  min-width: 48px;
+  min-height: 48px;
+  /* margin-left: auto;
+  margin-right: auto; */
 }
 
 .nav__list {
   width: 100%;
   padding: 0;
-  margin: 0;
+  margin: 0; 
 }
 
 .nav__item {
@@ -102,6 +107,26 @@ ul {
   line-height: 24px;
   padding: 24px;
   text-transform: uppercase;
+}
+
+#hamburguer {
+  font-family: u2400;
+  /* display: inline-block; */
+  font-size: 26px;
+  /* margin-bottom: 20px; */
+  margin: 0 0px 0 0;
+  padding: 24px;
+  /* line-height: 24px; */
+  display: none;
+  /* align-content: right; */
+  /* margin-left: 0; */
+  /* position: relative; */
+  /* min-width: 48px;
+  min-height: 48px; */
+}
+
+#toggle {
+  display: none;
 }
 
 .nav a {
@@ -153,7 +178,7 @@ main {
   position: relative;
   background-image: url("./images/dog.jpg");
   background-size: cover;
-  min-height: 300px;
+  min-height: 400px;
 }
 
 .hero article {
@@ -386,4 +411,62 @@ footer a {
   color: #333;
   min-width: 48px;
   min-height: 48px;
+}
+
+
+
+@media screen and (max-width: 500px) {
+  #hamburguer {
+    display: block;
+    cursor: pointer;
+    /* padding: 20px; */
+
+  }
+
+  .nav__item {
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.26);
+    padding: 0;
+    display: none;
+  }
+
+  /* .nav__list {
+    display: block;
+    margin: 0;
+  } */
+
+  /* .nav__item {
+    display: block;
+  } */
+
+  input[type=checkbox]:checked + .nav__item a {
+    display: block;
+  }
+
+  /* nav { */
+    /* width: 300px; */
+    /* position: relative;
+    text-align: right; */
+    /* margin-right: 0; */
+    
+  /* } */
+
+  /* .nav__list { */
+    /* width: 300px;
+    height: 100%; */
+    /* position: absolute;
+    transform: translate(600px, 0);
+    transition: transform 0.3s ease; */
+  /* } */
+
+  /* #hamburguer {
+    position: relative;
+    margin-right: 0px;
+  } */
+
+  /* #hamburguer.open { 
+    transform: translate(0, 0);
+  } */
+  
 }
