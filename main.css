@@ -406,10 +406,11 @@ footer a {
   .header {
     display: flex;
     flex-flow: row nowrap;
+
   }
   .header__inner {
-    padding-left: 0;
     margin-left: 0;
+    padding-left: 0;
     padding-bottom: 20px;
   }
 
@@ -425,21 +426,34 @@ footer a {
   }
 
   .nav {
-    min-width: 0;
-    min-height: 0;
+    min-width: 100%;
+    position: absolute;
+    height: 0px;
+    margin-bottom: -45px;
+    z-index: 10000;
+
+    width: 400px;
+    -webkit-transform: translate(-400px, 0);
+    transform: translate(-400px, 0);
+    transition: transform 0.3s ease;
+  }
+
+  .nav.open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
 
   .nav__item {
+    background-color: #fff;
     text-align: center;
-    width: 100%;
+    width: 80%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.26);
-    
-    display: none;
-  }
-
-  #toggle:checked ~ * .nav__item {
     display: block;
   }
+
+  /* #toggle:checked ~ * .nav__item {
+    display: block;
+  } */
 }
 
 @media screen and (min-width: 491px) and (max-width: 630px) {
@@ -466,21 +480,34 @@ footer a {
   }
 
   .nav {
-    min-width: 0;
-    min-height: 0;
+    min-width: 100%;
+    position: absolute;
+    height: 0px;
+    margin-bottom: -45px;
+    z-index: 10000;
+
+    width: 800px;
+    -webkit-transform: translate(-800px, 0);
+    transform: translate(-800px, 0);
+    transition: transform 0.3s ease;
+  }
+
+  .nav.open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
 
   .nav__item {
+    background-color: #fff;
     text-align: center;
-    width: 100%;
+    width: 80%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.26);
-    
-    display: none;
-  }
-
-  #toggle:checked ~ * .nav__item {
     display: block;
   }
+
+  /* #toggle:checked ~ * .nav__item {
+    display: block;
+  } */
 
 }
 
@@ -505,8 +532,9 @@ footer a {
   }
 
   .nav {
-    min-width: 0;
-    min-height: 0;
+    
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
 
   .content {
@@ -534,9 +562,16 @@ footer a {
     order: -1;
   }
 
+  .weather__today {
+    width: 100%;
+  }
+
+  .weather__today__image {
+    text-align: left;
+    width: 60%;
+  }
 
 }
-
 
 @media screen and (min-width: 731px) and (max-width: 830px) {
 
